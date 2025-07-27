@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">MyPortfolio</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <img src="MY PIC.jpeg" alt="Your Image" class="hero-img"/>
+    <h2>Hello, I'm [MAHI SONI]</h2>
+    <p>Frontend web Developer | Coder | Problem Solver</p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p><i>I am a Frontend web developer passionate about building modern websites.
+      As a Frontend Developer, I specialize in building user-friendly, responsive, and visually appealing web interfaces using HTML, CSS, and JavaScript. I focus on clean code, modern UI/UX principles, and dynamic functionality through DOM manipulation and JavaScript frameworks.
+
+With hands-on experience in responsive web design, cross-browser compatibility, and interactive components, I aim to create seamless user experiences that perform efficiently across all devices.</i>
+
+
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">HTML</div>
+    <div class="skill-card">CSS</div>
+    <div class="skill-card">JavaScript</div>
+    <div class="skill-card">React</div>
+    <div class="skill-card">Node.js</div>
+    <div class="skill-card">MongoDB</div>
+    <div class="skill-card">Git & GitHub</div>
+  </div>
+</section>
+
+  <!-- Projects -->
+  <!-- Projects -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="1proj.jpg" alt="Project 1 Screenshot" />
+      <h3>Spotify Clone</h3>
+      <p>Spotify Clone is a responsive, front-end web music player inspired by Spotify's UI and functionality. Built using HTML, CSS, and Vanilla JavaScript, it mimics core features such as play/pause controls, 
+        music list, progress bar, and song navigation — all with dynamic DOM manipulation and styling.</p>
+      <div class="project-links">
+        <a href="https://github.com/639251/movie-manager.git" target="_blank">GitHub</a>
+       
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="2proj.jpg" alt="Project 2 Screenshot" />
+      <h3>movie-manage website</h3>
+      <p>Movie Management Website is a front-end web application that allows users to manage a list of movies.
+         It is built using pure HTML, CSS, and Vanilla JavaScript with full DOM manipulation, without using any frameworks or databases.</p>
+      <div class="project-links">
+        <a href="https://github.com/639251/spotify-clone.git" target="_blank">GitHub</a>
+  
+      </div>
+    </div>
+
+    <!-- Add more projects here -->
+  </div>
+</section>
+
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <p><strong>Btech Computer Science</strong> - GCRG group of institutions (2025 - 2028)</p>
+    <p><strong>Diploma (IT)</strong> - Government Girls Polytechnic Lucknow (2022 - 2025)</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact Me</h2>
+
+    <div class="contact-info">
+    <p>You can reach me directly at:</p>
+    <p><a href="mailto:yourname@example.com" class="email-link">mahisoni1355@gmail.com</a></p>
+  </div>
+
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+      <p id="formResponse"></p>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>MAHI SONI</p>
+  </footer>
+
+  <script src="home.js"></script>
+</body>
+</html>
