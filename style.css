@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -21,6 +22,7 @@ body {
   max-width: 1100px;
   margin: auto;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -53,6 +55,7 @@ body {
   width: 140px;
   border-radius: 50%;
   border: 3px solid #555;
+  margin-bottom: 20px;
 }
 
 .section {
@@ -85,7 +88,6 @@ body {
   box-shadow: 0 6px 14px rgba(0,0,0,0.2);
   cursor: default;
 }
-
 
 .projects-grid {
   display: grid;
@@ -132,40 +134,4 @@ body {
   background: #00bcd4;
 }
 
-
-form input, form textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 12px;
-  border: 1px solid #aaa;
-  border-radius: 4px;
-}
-
-form button {
-  padding: 10px 20px;
-  background: #111;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #333;
-}
-
-.footer {
-  text-align: center;
-  background: #111;
-  color: white;
-  padding: 20px;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-  }
-
-  .skills-list {
-    justify-content: center;
-  }
-}
+form input,
