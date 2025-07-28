@@ -135,3 +135,106 @@ body {
 }
 
 form input,
+form textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+form button {
+  padding: 10px 20px;
+  background: #111;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #333;
+}
+
+.footer {
+  text-align: center;
+  background: #111;
+  color: white;
+  padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 10px;
+  }
+
+  .project-card img {
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+
+  .hero-img {
+    width: 100px;
+  }
+
+  .hero h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .skill-card {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .section h2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  .project-links a {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
