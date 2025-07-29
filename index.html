@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <link rel="stylesheet" href="style.css" />
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
+
 </head>
 <body>
 
@@ -15,15 +20,19 @@
   <header class="header">
     <div class="container">
       <h1 class="logo">MyPortfolio</h1>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+       <nav class="navbar">
+  <div class="menu-toggle" id="mobile-menu">
+    <i class="fas fa-bars"></i>
+  </div>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
     </div>
   </header>
 
@@ -37,29 +46,15 @@
   <!-- About -->
   <section id="about" class="section">
     <h2>About Me</h2>
-    <p><i>I am a Frontend web developer passionate about building modern websites.
-      As a Frontend Developer, I specialize in building user-friendly, responsive, and visually appealing web interfaces using HTML, CSS, and JavaScript. I focus on clean code, modern UI/UX principles, and dynamic functionality through DOM manipulation and JavaScript frameworks.
-
-With hands-on experience in responsive web design, cross-browser compatibility, and interactive components, I aim to create seamless user experiences that perform efficiently across all devices.</i>
-
+    <p><b>Hi, I'm Mahi Soni — a passionate Frontend Web Developer and a Computer Science Engineering student.  
+    I enjoy building modern, user-friendly websites using HTML, CSS, and JavaScript.  
+    I'm currently learning React and exploring new technologies to improve my skills.  
+    My goal is to create clean, responsive, and accessible web interfaces that offer great user experiences.</b>
 
     </p>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section">
-  <h2>Skills</h2>
-  <div class="skills-grid">
-    <div class="skill-card">HTML</div>
-    <div class="skill-card">CSS</div>
-    <div class="skill-card">JavaScript</div>
-    <div class="skill-card">React</div>
-    <div class="skill-card">Node.js</div>
-    <div class="skill-card">MongoDB</div>
-    <div class="skill-card">Git & GitHub</div>
-  </div>
-</section>
-
+  
   <!-- Projects -->
   <!-- Projects -->
 <section id="projects" class="section">
@@ -90,34 +85,55 @@ With hands-on experience in responsive web design, cross-browser compatibility, 
     </div>
 
     <!-- Add more projects here -->
+
+    <div class="project-card">
+      <img src="3 proj.jpg" alt="Project 3 Screenshot" />
+      <h3>Live - chatbot/js</h3>
+      <p>A responsive and interactive chatbot web app built using HTML, CSS, and JavaScript.  
+    The chatbot simulates real-time conversation, responds to user queries, and delivers a smooth user experience with typing animation and a modern UI.</p>
+      <div class="project-links">
+        <a href="https://639251.github.io/live-chatbot-js/" target="_blank">GitHub</a>
+  
+      </div>
+    </div>
   </div>
 </section>
 
 
   <!-- Education -->
-  <section id="education" class="section">
-    <h2>Education</h2>
-    <p><strong>Btech Computer Science</strong> - GCRG group of institutions (2025 - 2028)</p>
-    <p><strong>Diploma (IT)</strong> - Government Girls Polytechnic Lucknow (2022 - 2025)</p>
-  </section>
+ <section id="education" class="section education-section">
+  <h2>Education</h2>
+  <div class="edu-card">
+    <h3>B.Tech in Computer Science</h3>
+    <p>GCRG Group of Institutions</p>
+    <span class="edu-year">2025 - 2028</span>
+  </div>
+
+  <div class="edu-card">
+    <h3>Diploma in Information Technology</h3>
+    <p>Government Girls Polytechnic, Lucknow</p>
+    <span class="edu-year">2022 - 2025</span>
+  </div>
+</section>
 
   <!-- Contact -->
   <section id="contact" class="section">
     <h2>Contact Me</h2>
 
-    <div class="contact-info">
-    <p>You can reach me directly at:</p>
-    <p><a href="mailto:mahisoni123@gmail.com">Contact Me </a>
-      <p><a href="https://www.linkedin.com/in/mahi-soni-a5745a271" class="LinkedIn -link" target="_blank">LinkedIn profile </a></p>
+  <div class="contact-info">
+    <p>You can reach me at:</p>
+    <p><a href="mailto:mahisoni1355@gmail.com" class="email-link">mahisoni1355@gmail.com</a></p>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/mahi-soni-a5745a271" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/639251" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.instagram.com/the_rebelchild_66?igsh=cGJ0Mm1hMWllbXN4" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://x.com/MahiSon88524770?t=6uPxtq7u9GvgnSB6jqghSQ&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div>
   </div>
 
-    <form id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send</button>
-      <p id="formResponse"></p>
-    </form>
+   
   </section>
 
   <!-- Footer -->
