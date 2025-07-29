@@ -214,6 +214,23 @@ ul {
   border-radius: 4px;
 }
 
+.social-links a {
+  color: #0077cc;         /* Blue color */
+  font-size: 32px;        /* Bigger icons */
+  margin: 0 15px;         /* More space between icons */
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+  height: 48px;           /* Increase height */
+  width: 48px;            /* Increase width */
+  line-height: 48px;      /* Vertically center the icon */
+  text-align: center;     /* Horizontally center the icon */
+  border-radius: 8px;     /* Rounded edges */
+}
+
+.social-links a:hover {
+  color: #005fa3;         /* Darker blue on hover */
+  transform: scale(1.2);  /* Slightly enlarge on hover */
+}
 
 /* Contact */
 .contact-info {
