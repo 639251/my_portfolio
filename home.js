@@ -48,6 +48,16 @@
       }
     });
   }
+const menuToggle = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+
+  // Accessible aria-expanded update
+  const expanded = menuToggle.getAttribute("aria-expanded") === "true" || false;
+  menuToggle.setAttribute("aria-expanded", !expanded);
+});
 
   // ===== Read More / Read Less for Project Cards =====
   document.querySelectorAll('.read-more-btn').forEach((btn) => {
