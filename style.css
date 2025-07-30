@@ -114,44 +114,123 @@ ul {
   color: #222;
 }
 
+.skills-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-weight: 500;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #007BFF;
+  color: white;
+}
+
 /* Projects */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .project-card {
-  background: #f9f9f9;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.project-card:hover {
-  transform: scale(1.03);
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  position: relative;
 }
 
 .project-card img {
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
-.project-card h3 {
-  margin: 15px;
-  font-size: 20px;
+.project-description .full-text {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.project-card p {
-  margin: 0 15px 15px;
-  font-size: 15px;
-  color: #555;
+.project-card.expanded .project-description .full-text {
+  display: inline;
+  opacity: 1;
+}
+
+.project-card.expanded .read-more-btn::after {
+  content: 'Read Less';
+}
+
+.project-actions {
+  display: flex;
+  justify-content: space-between;  /* Left and right */
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.read-more-btn,
+.github-btn {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.read-more-btn:hover,
+.github-btn:hover {
+  background-color: #0056b3;
+}
+.project-card .read-more-btn {
+  margin-bottom: 16px; /* Read More button ke neeche gap */
+  display: block;      /* Button ko full width ya block banane ke liye */
 }
 
 .project-links {
-  margin: 0 15px 20px;
+  margin-top: 8px;     /* GitHub link ke upar gap */
 }
+
+
+
+
+
 
 .project-links a {
   background: #0077cc;
@@ -165,6 +244,7 @@ ul {
 .project-links a:hover {
   background: #005fa3;
 }
+
 /* Education Section */
 .education-section {
   background: #fefefe;
@@ -215,22 +295,33 @@ ul {
 }
 
 .social-links a {
-  color: #0077cc;         /* Blue color */
-  font-size: 32px;        /* Bigger icons */
-  margin: 0 15px;         /* More space between icons */
+  color: #0077cc;
+  /* Blue color */
+  font-size: 32px;
+  /* Bigger icons */
+  margin: 0 15px;
+  /* More space between icons */
   transition: color 0.3s, transform 0.3s;
   display: inline-block;
-  height: 48px;           /* Increase height */
-  width: 48px;            /* Increase width */
-  line-height: 48px;      /* Vertically center the icon */
-  text-align: center;     /* Horizontally center the icon */
-  border-radius: 8px;     /* Rounded edges */
+  height: 48px;
+  /* Increase height */
+  width: 48px;
+  /* Increase width */
+  line-height: 48px;
+  /* Vertically center the icon */
+  text-align: center;
+  /* Horizontally center the icon */
+  border-radius: 8px;
+  /* Rounded edges */
 }
 
 .social-links a:hover {
-  color: #005fa3;         /* Darker blue on hover */
-  transform: scale(1.2);  /* Slightly enlarge on hover */
+  color: #005fa3;
+  /* Darker blue on hover */
+  transform: scale(1.2);
+  /* Slightly enlarge on hover */
 }
+
 
 /* Contact */
 .contact-info {
@@ -273,11 +364,20 @@ ul {
   }
 
   .nav-links.active {
-    max-height: 500px; /* enough to show all items */
+    max-height: 500px;
+    /* enough to show all items */
   }
 
   .nav-links li {
     text-align: right;
     padding: 15px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
   }
 }
