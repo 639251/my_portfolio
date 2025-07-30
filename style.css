@@ -126,21 +126,46 @@ body {
   margin: auto;
 }
 
-.skill-card {
-  background: #ffffffcc;
-  border-radius: 10px;
-  padding: 1rem;
+/* Skills section container */
+.skills-section {
+  padding: 50px 20px;
+  background: #f9f9f9;
   text-align: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.skills-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* Grid container */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Skill cards */
+.skill-card {
+  background: #fff;
+  padding: 15px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 1rem;
   font-weight: 500;
-  transition: transform 0.3s ease, background 0.3s;
+  color: #444;
+  transition: transform 0.2s ease, background 0.3s ease;
+  cursor: default;
 }
 
 .skill-card:hover {
   transform: translateY(-5px);
-  background: #2196f3;
-  color: white;
+  background: #f0f0f0;
 }
+
 
 /* ===== PROJECTS ===== */
 .projects-grid {
