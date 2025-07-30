@@ -14,7 +14,70 @@
     }
   </style>
 
+<script>
+  <script>
+  (function () {
+    const btn = document.getElementById('hamburger');
+    const nav = document.getElementById('mobileNav');
+    const panel = nav?.querySelector('[data-panel]');
+    const backdrop = nav?.querySelector('[data-backdrop]');
+    const root = document.documentElement;
 
+    if (!btn || !nav) return;
+
+    function openMenu() {
+      nav.hidden = false;
+      btn.setAttribute('aria-expanded', 'true');
+      // body scroll lock
+      root.classList.add('overflow-hidden');
+
+      // Optional: focus first focusable element in panel
+      const firstLink = panel?.querySelector('a, button, input, [tabindex]:not([tabindex="-1"])');
+      firstLink?.focus();
+    }
+
+    function closeMenu() {
+      btn.setAttribute('aria-expanded', 'false');
+      nav.hidden = true;
+      root.classList.remove('overflow-hidden');
+      btn.focus();
+    }
+
+    function toggleMenu() {
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      isOpen ? closeMenu() : openMenu();
+    }
+
+    // Toggle on button click
+    btn.addEventListener('click', toggleMenu);
+
+    // Close on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // Close when clicking a link inside the panel
+    nav.addEventListener('click', (e) => {
+      const link = e.target.closest('a, button');
+      if (!link) return;
+      // Agar panel ke andar ka koi link/button click hua
+      if (panel && panel.contains(link)) {
+        closeMenu();
+      }
+    });
+
+    // Close on backdrop or outside click
+    document.addEventListener('click', (e) => {
+      const clickInsidePanel = panel && panel.contains(e.target);
+      const clickOnBtn = btn.contains(e.target);
+      if (!clickInsidePanel && !clickOnBtn && btn.getAttribute('aria-expanded') === 'true') {
+        closeMenu();
+      }
+    });
+  })();
+</script>
+
+</script>
 
 </head>
 
