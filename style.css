@@ -417,19 +417,37 @@ body {
     display: block;
   }
 
+ /* Remove duplicate nav-links styles and keep only this version */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+@media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
     background: #0d1b2a;
     position: absolute;
     top: 60px;
     right: 20px;
-    width: 200px;
+    width: 220px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: max-height 0.3s ease;
+    border-radius: 10px;
   }
+
+  .nav-links.active {
+    max-height: 400px; /* expands */
+  }
+
+  .nav-links li {
+    padding: 1rem;
+    text-align: right;
+  }
+}
+
 
   .nav-links.active {
     max-height: 300px;
@@ -572,3 +590,9 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .read-more-btn, .project-links a {
+    width: 100%;
+    text-align: center;
+  }
+}
