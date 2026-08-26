@@ -6,25 +6,33 @@
   <title>Mahi Soni — Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Frontend Web Developer portfolio — HTML, CSS, JavaScript, projects, education, and contact." />
+  <meta name="description" content="Full-Stack Web Developer portfolio — Node.js, Express, MongoDB, HTML, CSS, JavaScript, projects, education, and contact." />
 </head>
 <body>
   <!-- Header -->
   <header class="header" role="banner">
-    <div class="container">
+    <div class="container header-container">
       <a href="#" class="logo" aria-label="Go to top">MyPortfolio</a>
-      <nav class="navbar" role="navigation" aria-label="Primary">
-        <button class="menu-toggle" id="mobile-menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-          <i class="fas fa-bars" aria-hidden="true"></i>
-        </button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="header-right">
+        <nav class="navbar" role="navigation" aria-label="Primary">
+          <button class="menu-toggle" id="mobile-menu" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+          </button>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="theme-toggle-wrapper">
+          <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -32,17 +40,15 @@
   <section class="hero" id="home">
     <img src="MY PIC.jpeg" alt="Portrait of Mahi Soni" class="hero-img" />
     <h1>Hello, I'm <span class="highlight">Mahi Soni</span></h1>
-    <p>Frontend Web Developer • Coder • Problem Solver</p>
+    <p class="hero-subtitle">I'm a <span id="typed-text"></span><span class="typed-cursor" aria-hidden="true">|</span></p>
   </section>
 
   <!-- About -->
   <section id="about" class="section about-section">
     <div class="container narrow">
       <h2>About Me</h2>
-      <p><strong>Hi, I'm Mahi Soni</strong> — a passionate Frontend Web Developer and a Computer Science Engineering student.
-        I enjoy building modern, user-friendly websites using HTML, CSS, and JavaScript. I'm currently learning React and
-        exploring new technologies to improve my skills. My goal is to create clean, responsive, and accessible web interfaces
-        that offer great user experiences.</p>
+      <p><strong>Hi, I'm Mahi Soni</strong> — a passionate Full-Stack Web Developer and a Computer Science Engineering student.
+        I enjoy building modern, user-friendly websites with robust backends. I specialize in frontend design using HTML, CSS, and JavaScript, and backend integration using Node.js, Express, and MongoDB. My goal is to create clean, responsive, secure, and performant web interfaces that offer great end-to-end user experiences.</p>
     </div>
   </section>
 
@@ -50,15 +56,47 @@
   <section id="skills" class="skills-section section">
     <div class="container">
       <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">MS Word</div>
-        <div class="skill-card">Programming C</div>
-        <div class="skill-card">HTML</div>
-        <div class="skill-card">CSS</div>
-        <div class="skill-card">JavaScript</div>
-        <div class="skill-card">Bootstrap</div>
-        <div class="skill-card">Project Management</div>
-        <div class="skill-card">Git &amp; GitHub</div>
+      <div class="skills-category-grid">
+        <!-- Languages -->
+        <div class="skills-category-card">
+          <h3><i class="fas fa-code"></i> Languages</h3>
+          <ul class="skills-list">
+            <li><span class="skill-name">Programming C</span></li>
+            <li><span class="skill-name">JavaScript (ES6+)</span></li>
+            <li><span class="skill-name">HTML5</span></li>
+            <li><span class="skill-name">CSS3</span></li>
+          </ul>
+        </div>
+        <!-- Frontend -->
+        <div class="skills-category-card">
+          <h3><i class="fas fa-desktop"></i> Frontend</h3>
+          <ul class="skills-list">
+            <li><span class="skill-name">Bootstrap</span></li>
+            <li><span class="skill-name">Responsive Design</span></li>
+            <li><span class="skill-name">DOM Manipulation</span></li>
+            <li><span class="skill-name">API Integration</span></li>
+          </ul>
+        </div>
+        <!-- Backend & Database -->
+        <div class="skills-category-card">
+          <h3><i class="fas fa-server"></i> Backend &amp; Database</h3>
+          <ul class="skills-list">
+            <li><span class="skill-name">Node.js</span></li>
+            <li><span class="skill-name">Express.js</span></li>
+            <li><span class="skill-name">MongoDB</span></li>
+            <li><span class="skill-name">Mongoose</span></li>
+            <li><span class="skill-name">REST APIs</span></li>
+          </ul>
+        </div>
+        <!-- Tools & Productivity -->
+        <div class="skills-category-card">
+          <h3><i class="fas fa-toolbox"></i> Tools & Others</h3>
+          <ul class="skills-list">
+            <li><span class="skill-name">Git &amp; GitHub</span></li>
+            <li><span class="skill-name">MS Word</span></li>
+            <li><span class="skill-name">Project Management</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -71,92 +109,154 @@
         <!-- Project 1 -->
         <article class="project-card">
           <img src="1proj.jpg" alt="Screenshot of Spotify Clone project" />
-          <h3>Spotify Clone</h3>
-          <p class="project-description">
-            <span class="short-text">Spotify Clone is a responsive, front-end web music player...</span>
-            <span class="full-text">Built using HTML, CSS, and Vanilla JavaScript, it mimics core features such as
-              play/pause controls, music list, progress bar, and song navigation — all with dynamic DOM manipulation and styling.</span>
-          </p>
-          <button class="read-more-btn" type="button">Read More</button>
-          <div class="project-links">
-            <a href="https://github.com/639251/spotify-clone.git" target="_blank" rel="noopener">GitHub</a>
+          <div class="project-content">
+            <h3>Spotify Clone</h3>
+            <p class="project-description">
+              <span class="short-text">Spotify Clone is a responsive, front-end web music player...</span>
+              <span class="full-text">Built using HTML, CSS, and Vanilla JavaScript, it mimics core features such as
+                play/pause controls, music list, progress bar, and song navigation — all with dynamic DOM manipulation and styling.</span>
+            </p>
+            <button class="read-more-btn" type="button">Read More</button>
+            <div class="project-links">
+              <a href="https://github.com/639251/spotify-clone.git" target="_blank" rel="noopener">GitHub</a>
+            </div>
           </div>
         </article>
 
         <!-- Project 2 -->
         <article class="project-card">
           <img src="2proj.jpg" alt="Screenshot of Movie Manager project" />
-          <h3>Movie Manager Website</h3>
-          <p class="project-description">
-            <span class="short-text">Movie Management Website lets users manage a list of movies...</span>
-            <span class="full-text">Built using pure HTML, CSS, and Vanilla JavaScript with full DOM manipulation, without any frameworks or databases.</span>
-          </p>
-          <button class="read-more-btn" type="button">Read More</button>
-          <div class="project-links">
-            <a href="https://github.com/639251/movie-manager.git" target="_blank" rel="noopener">GitHub</a>
+          <div class="project-content">
+            <h3>Movie Manager Website</h3>
+            <p class="project-description">
+              <span class="short-text">Movie Management Website lets users manage a list of movies...</span>
+              <span class="full-text">Built using pure HTML, CSS, and Vanilla JavaScript with full DOM manipulation, without any frameworks or databases.</span>
+            </p>
+            <button class="read-more-btn" type="button">Read More</button>
+            <div class="project-links">
+              <a href="https://github.com/639251/movie-manager.git" target="_blank" rel="noopener">GitHub</a>
+            </div>
           </div>
         </article>
 
         <!-- Project 3 -->
         <article class="project-card">
           <img src="3 proj.jpg" alt="Screenshot of Live Chatbot project" />
-          <h3>Live - Chatbot (JS)</h3>
-          <p class="project-description">
-            <span class="short-text">A responsive and interactive chatbot web app built using HTML, CSS, and JavaScript.</span>
-            <span class="full-text">The chatbot simulates real-time conversation, responds to user queries, and delivers a smooth user experience
-              with typing animation and a modern UI.</span>
-          </p>
-          <button class="read-more-btn" type="button">Read More</button>
-          <div class="project-links">
-            <a href="https://639251.github.io/live-chatbot-js/" target="_blank" rel="noopener">Live</a>
-            <a href="https://github.com/639251/live-chatbot-js" target="_blank" rel="noopener">GitHub</a>
+          <div class="project-content">
+            <h3>Live - Chatbot (JS)</h3>
+            <p class="project-description">
+              <span class="short-text">A responsive and interactive chatbot web app built using HTML, CSS, and JavaScript.</span>
+              <span class="full-text">The chatbot simulates real-time conversation, responds to user queries, and delivers a smooth user experience
+                with typing animation and a modern UI.</span>
+            </p>
+            <button class="read-more-btn" type="button">Read More</button>
+            <div class="project-links">
+              <a href="https://639251.github.io/live-chatbot-js/" target="_blank" rel="noopener">Live</a>
+              <a href="https://github.com/639251/live-chatbot-js" target="_blank" rel="noopener">GitHub</a>
+            </div>
           </div>
         </article>
 
          <!-- Project 4 -->
         <article class="project-card">
           <img src="4 proj.jpg" alt="Screenshot of weather project" />
-          <h3>Weather App (JS)</h3>
-          <p class="project-description">
-            <span class="short-text">A responsive and intuitive Weather App built using HTML, CSS, and JavaScript.</span>
-            <span class="full-text">The app fetches real-time weather data using an API, providing instant temperature, climate conditions, and city search updates with a clean UI.</span>
-          </p>
-          <button class="read-more-btn" type="button">Read More</button>
-          <div class="project-links">
-            <a href="https://639251.github.io/Weather-App/" target="_blank" rel="noopener">Live</a>
-            <a href="https://github.com/639251/Weather-App" target="_blank" rel="noopener">GitHub</a>
+          <div class="project-content">
+            <h3>Weather App (JS)</h3>
+            <p class="project-description">
+              <span class="short-text">A responsive and intuitive Weather App built using HTML, CSS, and JavaScript.</span>
+              <span class="full-text">The app fetches real-time weather data using an API, providing instant temperature, climate conditions, and city search updates with a clean UI.</span>
+            </p>
+            <button class="read-more-btn" type="button">Read More</button>
+            <div class="project-links">
+              <a href="https://639251.github.io/Weather-App/" target="_blank" rel="noopener">Live</a>
+              <a href="https://github.com/639251/Weather-App" target="_blank" rel="noopener">GitHub</a>
+            </div>
           </div>
         </article>
-     
       </div>
     </div>
   </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section experience-section">
+    <div class="container">
+      <h2>Work Experience</h2>
+      <div class="experience-timeline">
+        <div class="experience-card">
+          <div class="exp-header">
+            <div class="exp-title-group">
+              <h3>AI Automation & Intelligent Solutions Intern</h3>
+              <p class="exp-company">BharatCares® <span class="association">in association with AICTE & IBM SkillsBuild</span></p>
+            </div>
+            <span class="exp-date">Jun 2026 – Jul 2026 (6 Weeks)</span>
+          </div>
+          <div class="exp-body">
+            <p class="exp-description">
+              Successfully completed an intensive 6-week AI Automation & Intelligent Solutions internship. Gained valuable hands-on experience in implementing Artificial Intelligence models, developing automation systems, and working on cognitive technology platforms.
+            </p>
+            <ul class="exp-bullets">
+              <li>Acquired foundation knowledge in Machine Learning (ML), Deep Learning, and Intelligent Automation tools.</li>
+              <li>Collaborated on building end-to-end automation scripts and workflows to streamline data tasks.</li>
+              <li>Participated in interactive training sessions under joint leadership of BharatCares, IBM SkillsBuild, and AICTE.</li>
+            </ul>
+            <div class="exp-meta">
+              <span class="credential-id"><strong>Credential ID:</strong> BHIBMAC11518</span>
+              <div class="exp-tags">
+                <span class="tag">Artificial Intelligence (AI)</span>
+                <span class="tag">Automation</span>
+                <span class="tag">Intelligent Solutions</span>
+              </div>
+            </div>
+            <button id="view-cert-btn" class="view-cert-btn" type="button">
+              <i class="fas fa-certificate"></i> View Certificate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate Modal -->
+  <div id="cert-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="close-modal" id="close-modal-btn" aria-label="Close modal">&times;</button>
+      <h3 id="modal-title">IBM SkillsBuild Internship Certificate</h3>
+      <img src="internship_certificate.png" alt="IBM SkillsBuild AI Automation & Intelligent Solutions Internship Certificate for Mahi Soni" class="modal-img" />
+      <div class="modal-actions">
+        <a href="internship_certificate.png" download="Mahi_Soni_Internship_Certificate.png" class="download-cert-btn">
+          <i class="fas fa-download"></i> Download Certificate
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Education -->
   <section id="education" class="section education-section">
     <div class="container narrow">
       <h2>Education</h2>
-      <div class="edu-card">
-        <h3>B.Tech in Computer Science</h3>
-        <p>GCRG Group of Institutions</p>
-        <span class="edu-year">2025 – 2028</span>
-      </div>
+      <div class="edu-timeline">
+        <div class="edu-card">
+          <h3>B.Tech in Computer Science</h3>
+          <p class="edu-institution">GCRG Group of Institutions</p>
+          <span class="edu-year">2025 – 2028</span>
+        </div>
 
-      <div class="edu-card">
-        <h3>Diploma in Information Technology</h3>
-        <p>Government Girls Polytechnic, Lucknow</p>
-        <span class="edu-year">2022 – 2025</span>
+        <div class="edu-card">
+          <h3>Diploma in Information Technology</h3>
+          <p class="edu-institution">Government Girls Polytechnic, Lucknow</p>
+          <span class="edu-year">2022 – 2025</span>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="section">
-    <div class="container narrow">
+  <section id="contact" class="section contact-section">
+    <div class="container narrow contact-container">
       <h2>Contact Me</h2>
-      <div class="contact-info">
-        <p>You can reach me at:</p>
-        <p><a href="mailto:mahisoni1355@gmail.com" class="email-link">mahisoni1355@gmail.com</a></p>
+      <div class="contact-card">
+        <p>Feel free to reach out for collaborations, job opportunities, or project inquiries!</p>
+        <a href="mailto:mahisoni1355@gmail.com" class="email-link"><i class="fas fa-envelope"></i> mahisoni1355@gmail.com</a>
 
         <!-- Social Media Links -->
         <div class="social-links" aria-label="Social links">
@@ -171,10 +271,14 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© 2025 Mahi Soni. <em>Code is poetry.</em></p>
+    <p>© <span id="current-year">2025</span> Mahi Soni. <em>Code is poetry.</em></p>
   </footer>
+
+  <!-- Scroll To Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top-btn" aria-label="Scroll to top" title="Go to top">
+    <i class="fas fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
   <script src="home.js"></script>
 </body>
 </html>
-
